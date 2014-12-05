@@ -1,1 +1,1 @@
-Experimental project with Haxe + Lime + OpenFL + HaxeFlixel.
+The first of many children's books, inshaAllah.
