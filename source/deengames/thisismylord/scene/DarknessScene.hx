@@ -20,9 +20,9 @@ class DarknessScene extends Scene
   */
   override public function create():Void
   {
-    this.nextScene = new deengames.thisismylord.scene.PlanetScene();
-    this.previousScene = new deengames.thisismylord.scene.TitleScreen();
     var title:FlxSprite = this.addAndCenter('assets/images/1-darkness-skies.png');
+    this.previousScene = new deengames.thisismylord.scene.TitleScreen();
+    this.nextScene = new deengames.thisismylord.scene.PlanetScene();
     super.create();
   }
 

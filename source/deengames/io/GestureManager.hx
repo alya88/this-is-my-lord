@@ -25,19 +25,26 @@ class GestureManager
       var gesture:Gesture = Gesture.Swipe; // TODO: detect, implement more
       var gestureStop:FlxPoint = FlxG.mouse.getScreenPosition();
       var vector:FlxPoint = new FlxPoint(gestureStop.x - gestureStart.x, gestureStop.y - gestureStart.y);
-      var swipeDirection:SwipeDirection;
-      if (Math.abs(vector.x) >= Math.abs(vector.y)) {
-          swipeDirection = vector.x > 0 ? SwipeDirection.Right : SwipeDirection.Left;
+
+      if ((vector.x * vector.x) + (vector.y + vector.y) <= 50) {
+        // Too small to tell what the user wants; movement of 5x5 pixels or so
+        return;
       } else {
-        swipeDirection = vector.y > 0 ? SwipeDirection.Down : SwipeDirection.Up;
-      }
 
-      if (this.callbacks.exists(Gesture.Swipe)) {
-        var callback:SwipeDirection->Void = this.callbacks.get(Gesture.Swipe);
-        callback(swipeDirection);
-      }
+        var swipeDirection:SwipeDirection;
+        if (Math.abs(vector.x) >= Math.abs(vector.y)) {
+            swipeDirection = vector.x > 0 ? SwipeDirection.Right : SwipeDirection.Left;
+        } else {
+          swipeDirection = vector.y > 0 ? SwipeDirection.Down : SwipeDirection.Up;
+        }
 
-      gestureStart = null;
+        if (this.callbacks.exists(Gesture.Swipe)) {
+          var callback:SwipeDirection->Void = this.callbacks.get(Gesture.Swipe);
+          callback(swipeDirection);
+        }
+
+        gestureStart = null;
+      }
     }
   }
 }
