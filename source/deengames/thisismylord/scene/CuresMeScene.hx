@@ -13,16 +13,16 @@ import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
 
-class GuidesMeScene extends Scene
+class CuresMeScene extends Scene
 {
   /**
   * Function that is called up when to state is created to set it up.
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/11-guides-me.png');
-    this.previousScene = new deengames.thisismylord.scene.CreatedMeScene();
-    this.nextScene = new deengames.thisismylord.scene.TitleScreen();
+    var title:FlxSprite = this.addAndCenter('assets/images/13-cures-me.png');
+    this.previousScene = new deengames.thisismylord.scene.FeedsMeScene();
+    this.nextScene = new deengames.thisismylord.scene.ToDieScene();
     super.create();
   }
 

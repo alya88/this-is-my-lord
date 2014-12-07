@@ -8,22 +8,21 @@ import flash.Lib;
 import flixel.FlxGame;
 import flixel.FlxState;
 import flixel.FlxSprite;
+import deengames.beyondbooks.Scene;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
 
-import deengames.io.GestureManager;
-import deengames.beyondbooks.Scene;
-
-class TitleScreen extends Scene
+class ToDieScene extends Scene
 {
   /**
   * Function that is called up when to state is created to set it up.
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/titlescreen.png');
-    this.nextScene = new deengames.thisismylord.scene.DarknessScene();
+    var title:FlxSprite = this.addAndCenter('assets/images/14-to-die.png');
+    this.previousScene = new deengames.thisismylord.scene.CuresMeScene();
+    this.nextScene = new deengames.thisismylord.scene.ForgivenessScene();
     super.create();
   }
 
@@ -41,7 +40,6 @@ class TitleScreen extends Scene
   */
   override public function update():Void
   {
-    this.gestureManager.update();
     super.update();
   }
 }

@@ -15,15 +15,16 @@ import flixel.plugin.MouseEventManager;
 import deengames.io.GestureManager;
 import deengames.beyondbooks.Scene;
 
-class TitleScreen extends Scene
+class TheEndScreen extends Scene
 {
   /**
   * Function that is called up when to state is created to set it up.
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/titlescreen.png');
-    this.nextScene = new deengames.thisismylord.scene.DarknessScene();
+    var title:FlxSprite = this.addAndCenter('assets/images/the-end.png');
+    this.previousScene = new deengames.thisismylord.scene.ForgivenessScene();
+    this.nextScene = new deengames.thisismylord.scene.TitleScreen();
     super.create();
   }
 
