@@ -8,15 +8,18 @@ import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
+import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
 import deengames.io.GestureManager;
 
 /**
-* A common state used for all scenes.
+* A common base state used for all scenes.
 */
 class Scene extends FlxState
 {
   private var gestureManager:GestureManager = new GestureManager();
+  private var nextScene:Scene;
+  private var previousScene:Scene;
 
   /**
   * Function that is called up when to state is created to set it up.
@@ -80,6 +83,18 @@ class Scene extends FlxState
 
   private function onSwipe(direction:SwipeDirection) : Void
   {
-    trace("Gesture:" + direction);
+    if (direction == SwipeDirection.Right && this.nextScene != null) {
+      FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showNextScene);
+    } else if (direction == SwipeDirection.Left && this.previousScene != null) {
+      FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showPreviousScene);
+    }
+  }
+
+  private function showNextScene() : Void {
+    FlxG.switchState(this.nextScene);
+  }
+
+  private function showPreviousScene() : Void {
+    FlxG.switchState(this.previousScene);
   }
 }

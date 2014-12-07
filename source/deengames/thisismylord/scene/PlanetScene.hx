@@ -20,8 +20,10 @@ class PlanetScene extends Scene
   */
   override public function create():Void
   {
+    this.nextScene = new deengames.thisismylord.scene.TitleScreen();
+    this.previousScene = new deengames.thisismylord.scene.DarknessScene();
+
     var title:FlxSprite = this.addAndCenter('assets/images/2-saw-planet.png');
-    MouseEventManager.add(title, onClick, null,null, null);
     super.create();
   }
 
@@ -40,14 +42,5 @@ class PlanetScene extends Scene
   override public function update():Void
   {
     super.update();
-  }
-
-  private function onClick(sprite:FlxSprite) : Void
-  {
-    FlxG.camera.fade(FlxColor.BLACK, .5, false, onFadedOut);
-  }
-
-  private function onFadedOut() : Void {
-    FlxG.switchState(new deengames.thisismylord.scene.TitleScreen());
   }
 }

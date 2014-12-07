@@ -24,6 +24,7 @@ class TitleScreen extends Scene
   override public function create():Void
   {
     var title:FlxSprite = this.addAndCenter('assets/images/titlescreen.png');
+    this.nextScene = new DarknessScene();
     super.create();
   }
 
@@ -43,14 +44,5 @@ class TitleScreen extends Scene
   {
     this.gestureManager.update();
     super.update();
-  }
-
-  private function onClick(sprite:FlxSprite) : Void
-  {
-    FlxG.camera.fade(FlxColor.BLACK, .5, false, onFadedOut);
-  }
-
-  private function onFadedOut() : Void {
-    FlxG.switchState(new DarknessScene());
   }
 }

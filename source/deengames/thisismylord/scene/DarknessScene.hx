@@ -20,8 +20,9 @@ class DarknessScene extends Scene
   */
   override public function create():Void
   {
+    this.nextScene = new deengames.thisismylord.scene.PlanetScene();
+    this.previousScene = new deengames.thisismylord.scene.TitleScreen();
     var title:FlxSprite = this.addAndCenter('assets/images/1-darkness-skies.png');
-    MouseEventManager.add(title, onClick, null,null, null);
     super.create();
   }
 
@@ -40,14 +41,5 @@ class DarknessScene extends Scene
   override public function update():Void
   {
     super.update();
-  }
-
-  private function onClick(sprite:FlxSprite) : Void
-  {
-    FlxG.camera.fade(FlxColor.BLACK, .5, false, onFadedOut);
-  }
-
-  private function onFadedOut() : Void {
-    FlxG.switchState(new deengames.thisismylord.scene.PlanetScene());
   }
 }
