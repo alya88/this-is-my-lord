@@ -12,6 +12,7 @@ import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
 
+import deengames.io.GestureManager;
 import deengames.beyondbooks.Scene;
 import deengames.thisismylord.scene.DarknessScene;
 
@@ -23,7 +24,6 @@ class TitleScreen extends Scene
   override public function create():Void
   {
     var title:FlxSprite = this.addAndCenter('assets/images/titlescreen.png');
-    MouseEventManager.add(title, onClick, null,null, null);
     super.create();
   }
 
@@ -41,6 +41,7 @@ class TitleScreen extends Scene
   */
   override public function update():Void
   {
+    this.gestureManager.update();
     super.update();
   }
 

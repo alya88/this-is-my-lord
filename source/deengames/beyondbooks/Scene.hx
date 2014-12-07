@@ -9,17 +9,21 @@ import flixel.ui.FlxButton;
 import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
 import flixel.plugin.MouseEventManager;
+import deengames.io.GestureManager;
 
 /**
-* A common state used to setup scenes quickly. Mostly helpers.
+* A common state used for all scenes.
 */
 class Scene extends FlxState
 {
+  private var gestureManager:GestureManager = new GestureManager();
+
   /**
   * Function that is called up when to state is created to set it up.
   */
   override public function create():Void
   {
+    this.gestureManager.onGesture(Gesture.Swipe, onSwipe);
     super.create();
   }
 
@@ -37,6 +41,7 @@ class Scene extends FlxState
   */
   override public function update():Void
   {
+    this.gestureManager.update();
     super.update();
   }
 
@@ -71,5 +76,10 @@ class Scene extends FlxState
   {
     sprite.x = (FlxG.width - sprite.width) / 2;
     sprite.y = (FlxG.height - sprite.height) / 2;
+  }
+
+  private function onSwipe(direction:SwipeDirection) : Void
+  {
+    trace("Gesture:" + direction);
   }
 }
