@@ -89,10 +89,10 @@ class Scene extends FlxState
 
   private function onSwipe(direction:SwipeDirection) : Void
   {
-    if (direction == SwipeDirection.Right && this.nextScene != null) {
+    if (direction == SwipeDirection.Left && this.nextScene != null) {
       //FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showNextScene);
       showNextScene();
-    } else if (direction == SwipeDirection.Left && this.previousScene != null) {
+    } else if (direction == SwipeDirection.Right && this.previousScene != null) {
       //FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showPreviousScene);
       showPreviousScene();
     }

@@ -26,8 +26,8 @@ class GestureManager
       var gestureStop:FlxPoint = FlxG.mouse.getScreenPosition();
       var vector:FlxPoint = new FlxPoint(gestureStop.x - gestureStart.x, gestureStop.y - gestureStart.y);
 
-      if ((vector.x * vector.x) + (vector.y + vector.y) <= 50) {
-        // Too small to tell what the user wants; movement of 5x5 pixels or so
+      if ((vector.x * vector.x) + (vector.y + vector.y) <= 25) {
+        // Too small to tell what the user wants; movement of 4x4 pixels or so
         return;
       } else {
 
