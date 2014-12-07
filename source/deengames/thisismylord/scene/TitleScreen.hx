@@ -41,7 +41,6 @@ class TitleScreen extends Scene
   */
   override public function update():Void
   {
-    this.gestureManager.update();
     super.update();
   }
 }

@@ -24,7 +24,12 @@ class TheEndScreen extends Scene
   {
     var title:FlxSprite = this.addAndCenter('assets/images/the-end.png');
     this.previousScene = new deengames.thisismylord.scene.ForgivenessScene();
-    this.nextScene = new deengames.thisismylord.scene.TitleScreen();
+    this.nextScene = new deengames.thisismylord.scene.DarknessScene();
+
+    var restart:FlxSprite = this.addAndCenter('assets/images/restart.png');
+    restart.y = FlxG.height - restart.height - 32;
+    MouseEventManager.add(restart, null, restartGame, null, null);
+
     super.create();
   }
 
@@ -42,7 +47,11 @@ class TheEndScreen extends Scene
   */
   override public function update():Void
   {
-    this.gestureManager.update();
     super.update();
+  }
+
+  private function restartGame(sprite:FlxSprite) : Void
+  {
+    FlxG.switchState(this.nextScene);
   }
 }

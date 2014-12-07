@@ -50,10 +50,16 @@ class Scene extends FlxState
 
   public function addAndCenter(fileName:String) : FlxSprite
   {
+    var sprite = this.addSprite(fileName);
+    centerOnScreen(sprite);
+    return sprite;
+  }
+
+  private function addSprite(fileName:String) : FlxSprite
+  {
     var sprite = new FlxSprite();
     sprite.loadGraphic(fileName);
     add(sprite);
-    centerOnScreen(sprite);
     return sprite;
   }
 
@@ -84,9 +90,11 @@ class Scene extends FlxState
   private function onSwipe(direction:SwipeDirection) : Void
   {
     if (direction == SwipeDirection.Right && this.nextScene != null) {
-      FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showNextScene);
+      //FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showNextScene);
+      showNextScene();
     } else if (direction == SwipeDirection.Left && this.previousScene != null) {
-      FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showPreviousScene);
+      //FlxG.camera.fade(FlxColor.BLACK, 0.5, false, showPreviousScene);
+      showPreviousScene();
     }
   }
 
