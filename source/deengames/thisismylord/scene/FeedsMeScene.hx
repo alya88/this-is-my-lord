@@ -20,7 +20,7 @@ class FeedsMeScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/12-feeds-me.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-12-feeds-me.png');
     this.previousScene = new deengames.thisismylord.scene.GuidesMeScene();
     this.nextScene = new deengames.thisismylord.scene.CuresMeScene();
     super.create();

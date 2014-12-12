@@ -20,7 +20,7 @@ class MoonSetsScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/6-moon-sets.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-6-moon-sets.png');
     this.previousScene = new deengames.thisismylord.scene.LookingAtMoonScene();
     this.nextScene = new deengames.thisismylord.scene.SunriseScene();
     super.create();

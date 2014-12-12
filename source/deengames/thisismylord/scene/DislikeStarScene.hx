@@ -20,9 +20,10 @@ class DislikeStarScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/4-dislike-star.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-4-dislike-star.png');
     this.previousScene = new deengames.thisismylord.scene.PointingAtStarScene();
     this.nextScene = new deengames.thisismylord.scene.LookingAtMoonScene();
+    deengames.io.AudioManager.play('assets/audio/speech/scene-4-dislike-star.mp3');
     super.create();
   }
 

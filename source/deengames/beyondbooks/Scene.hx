@@ -104,5 +104,5 @@ class Scene extends FlxState
 
   private function showPreviousScene() : Void {
     FlxG.switchState(this.previousScene);
-  }
+  }  
 }

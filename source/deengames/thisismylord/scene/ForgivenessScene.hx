@@ -20,7 +20,7 @@ class ForgivenessScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/15-forgiveness.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-15-forgiveness.png');
     this.previousScene = new deengames.thisismylord.scene.ToDieScene();
     this.nextScene = new deengames.thisismylord.scene.TheEndScreen();
     super.create();

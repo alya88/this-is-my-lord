@@ -20,7 +20,7 @@ class FreeOfYouScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/8-free-of-you.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-8-free-of-you.png');
     this.previousScene = new deengames.thisismylord.scene.SunriseScene();
     this.nextScene = new deengames.thisismylord.scene.CreatorOfUniverseScene();
     super.create();

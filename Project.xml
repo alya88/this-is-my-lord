@@ -32,7 +32,7 @@
 
 	<set name="BUILD_DIR" value="export" />
 	<classpath name="source" />
-	<assets path="assets" exclude="*.xcf" />
+	<assets path="assets" />
 
 	<!--------------------------------LIBRARIES------------------------------------->
 

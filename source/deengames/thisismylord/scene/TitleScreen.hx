@@ -13,6 +13,7 @@ import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
 
 import deengames.io.GestureManager;
+import deengames.io.AudioManager;
 import deengames.beyondbooks.Scene;
 
 class TitleScreen extends Scene
@@ -24,6 +25,7 @@ class TitleScreen extends Scene
   {
     var title:FlxSprite = this.addAndCenter('assets/images/titlescreen.png');
     this.nextScene = new deengames.thisismylord.scene.DarknessScene();
+    AudioManager.play('assets/audio/speech/title.mp3');
     super.create();
   }
 

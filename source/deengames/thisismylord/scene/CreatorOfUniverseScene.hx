@@ -20,7 +20,7 @@ class CreatorOfUniverseScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/9-creator-of-universe.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-9-creator-of-universe.png');
     this.previousScene = new deengames.thisismylord.scene.FreeOfYouScene();
     this.nextScene = new deengames.thisismylord.scene.CreatedMeScene();
     super.create();

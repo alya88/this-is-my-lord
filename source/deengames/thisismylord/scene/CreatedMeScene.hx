@@ -20,7 +20,7 @@ class CreatedMeScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/10-created-me.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-10-created-me.png');
     this.previousScene = new deengames.thisismylord.scene.CreatorOfUniverseScene();
     this.nextScene = new deengames.thisismylord.scene.GuidesMeScene();
     super.create();
