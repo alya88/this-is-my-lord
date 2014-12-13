@@ -20,7 +20,7 @@ class GuidesMeScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/scene-11-guides-me.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-11-guides-me.jpg');
     this.previousScene = new deengames.thisismylord.scene.CreatedMeScene();
     this.nextScene = new deengames.thisismylord.scene.FeedsMeScene();
     deengames.io.AudioManager.play('assets/audio/speech/scene-11-guides-me.mp3');

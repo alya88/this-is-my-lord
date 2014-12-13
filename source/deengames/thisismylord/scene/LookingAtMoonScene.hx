@@ -20,7 +20,7 @@ class LookingAtMoonScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/scene-5-looking-at-moon.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-5-looking-at-moon.jpg');
     this.previousScene = new deengames.thisismylord.scene.DislikeStarScene();
     this.nextScene = new deengames.thisismylord.scene.MoonSetsScene();
     deengames.io.AudioManager.play('assets/audio/speech/scene-5-looking-at-moon.mp3');

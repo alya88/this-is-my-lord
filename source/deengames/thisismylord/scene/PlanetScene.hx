@@ -20,7 +20,7 @@ class PlanetScene extends Scene
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/scene-2-saw-planet.png');
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-2-saw-planet.jpg');
     this.previousScene = new deengames.thisismylord.scene.DarknessScene();
     this.nextScene = new deengames.thisismylord.scene.PointingAtStarScene();
     deengames.io.AudioManager.play('assets/audio/speech/scene-2-saw-planet.mp3');
