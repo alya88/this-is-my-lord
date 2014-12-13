@@ -30,6 +30,7 @@ class TheEndScreen extends Scene
     restart.y = FlxG.height - restart.height - 32;
     MouseEventManager.add(restart, null, restartGame, null, null);
 
+    deengames.io.AudioManager.play('assets/audio/speech/the-end.mp3');
     super.create();
   }
 

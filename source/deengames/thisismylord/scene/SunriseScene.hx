@@ -24,6 +24,7 @@ class SunriseScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-7-sunrise.png');
     this.previousScene = new deengames.thisismylord.scene.MoonSetsScene();
     this.nextScene = new deengames.thisismylord.scene.FreeOfYouScene();
+    deengames.io.AudioManager.play('assets/audio/speech/scene-7-sunrise.mp3');
     super.create();
   }
 

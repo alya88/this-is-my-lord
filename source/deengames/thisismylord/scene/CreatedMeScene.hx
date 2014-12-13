@@ -23,6 +23,7 @@ class CreatedMeScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-10-created-me.png');
     this.previousScene = new deengames.thisismylord.scene.CreatorOfUniverseScene();
     this.nextScene = new deengames.thisismylord.scene.GuidesMeScene();
+    deengames.io.AudioManager.play('assets/audio/speech/scene-10-created-me.mp3');
     super.create();
   }
 
