@@ -63,6 +63,18 @@ class Scene extends FlxState
     return sprite;
   }
 
+  private function addAndCenterAnimation(spriteSheet:String, width:Int, height:Int, frames:Int, fps:Int) : FlxSprite
+  {
+    var sprite:FlxSprite = new FlxSprite();
+    sprite.loadGraphic(spriteSheet, true, width, height);
+    var range = [for (i in 0 ... frames) i];
+    sprite.animation.add('loop', range, fps, true);
+    sprite.animation.play('loop');
+    add(sprite);
+    centerOnScreen(sprite);
+    return sprite;
+  }
+
   private function scaleToFitNonUniform(sprite:FlxSprite) : Void
   {
     // scale to fit
@@ -104,5 +116,5 @@ class Scene extends FlxState
 
   private function showPreviousScene() : Void {
     FlxG.switchState(this.previousScene);
-  }  
+  }
 }

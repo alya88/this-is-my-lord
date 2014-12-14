@@ -20,7 +20,6 @@ class SunriseScene extends Scene
   */
   override public function create():Void
   {
-    // TODO: replace this with an animation fo the sun rising.
     var title:FlxSprite = this.addAndCenter('assets/images/scene-7-sunrise.jpg');
     this.previousScene = new deengames.thisismylord.scene.MoonSetsScene();
     this.nextScene = new deengames.thisismylord.scene.FreeOfYouScene();
