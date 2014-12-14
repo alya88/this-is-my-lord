@@ -24,6 +24,15 @@ class CreatedMeScene extends Scene
     this.previousScene = new deengames.thisismylord.scene.CreatorOfUniverseScene();
     this.nextScene = new deengames.thisismylord.scene.GuidesMeScene();
     deengames.io.AudioManager.play('assets/audio/speech/scene-10-created-me.mp3');
+
+    var heartbeat:FlxSprite = new FlxSprite();
+    heartbeat.loadGraphic('assets/images/beating-heart.jpg', true, 500, 373);
+    heartbeat.animation.add('loop', [0, 1, 2, 3, 4], 8, true);
+    heartbeat.animation.play('loop');
+    heartbeat.x = (FlxG.width - heartbeat.width) / 2;
+    heartbeat.y = (FlxG.height - heartbeat.height) / 2;
+    add(heartbeat);
+
     super.create();
   }
 
