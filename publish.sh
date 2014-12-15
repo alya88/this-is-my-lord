@@ -1,3 +1,3 @@
 #!/bin/sh
-rm ThisIsMyLord.swf
+rm *.swf
 cp export/flash/bin/ThisIsMyLord.swf .

@@ -39,7 +39,6 @@
 	<!--------------------------------LIBRARIES------------------------------------->
 
 	<haxelib name="flixel"/>
-	<haxelib name="haxe-gif"/>
 	<haxelib name="yagp"/>
 
 	<!--In case you want to use the addons package-->
