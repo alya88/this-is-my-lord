@@ -25,6 +25,7 @@ class SunriseScene extends Scene
     this.nextScene = new deengames.thisismylord.scene.FreeOfYouScene();
     deengames.io.AudioManager.play('assets/audio/speech/scene-7-sunrise.mp3');
 
+    this.addAndCenterAnimatedGif('assets/images/sunset.gif');
     super.create();
   }
 

@@ -32,11 +32,15 @@
 
 	<set name="BUILD_DIR" value="export" />
 	<classpath name="source" />
+
 	<assets path="assets" />
+	<assets path="assets" include="*.gif" type="binary" />
 
 	<!--------------------------------LIBRARIES------------------------------------->
 
 	<haxelib name="flixel"/>
+	<haxelib name="haxe-gif"/>
+	<haxelib name="yagp"/>
 
 	<!--In case you want to use the addons package-->
 	<!--haxelib name="flixel-addons" /-->
@@ -83,5 +87,5 @@
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
 	<icon path="assets/icon.svg" />
-	
+
 </project>

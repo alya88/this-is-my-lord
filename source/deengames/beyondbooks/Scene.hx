@@ -12,6 +12,14 @@ import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
 import deengames.io.GestureManager;
 
+// The below block is for animated GIFs (yagp)
+import com.yagp.GifDecoder;
+import com.yagp.Gif;
+import com.yagp.GifPlayer;
+import com.yagp.GifPlayerWrapper;
+import com.yagp.GifRenderer;
+import openfl.Assets;
+
 /**
 * A common base state used for all scenes.
 */
@@ -73,6 +81,16 @@ class Scene extends FlxState
     add(sprite);
     centerOnScreen(sprite);
     return sprite;
+  }
+
+  private function addAndCenterAnimatedGif(file:String) {
+    var gif:Gif = GifDecoder.parseByteArray(Assets.getBytes(file));
+    // Gif is null? Make sure in Project.xml, you specify *.gif as type=binary
+    var player:GifPlayer = new GifPlayer(gif);
+    var wrapper:GifPlayerWrapper = new GifPlayerWrapper(player);
+    FlxG.addChildBelowMouse(wrapper);
+    wrapper.x = (FlxG.width - wrapper.width) / 2;
+    wrapper.y = (FlxG.height - wrapper.height) / 2;
   }
 
   private function scaleToFitNonUniform(sprite:FlxSprite) : Void
