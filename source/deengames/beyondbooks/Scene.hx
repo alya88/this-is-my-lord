@@ -10,6 +10,8 @@ import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
+import flixel.system.FlxSound;
+
 import deengames.io.GestureManager;
 
 // The below block is for animated GIFs (yagp)
@@ -28,6 +30,9 @@ class Scene extends FlxState
   private var gestureManager:GestureManager = new GestureManager();
   private var nextScene:Scene;
   private var previousScene:Scene;
+  private var audio:FlxSound;
+  private var audioButton:FlxSprite;
+  private var showAudioButton:Bool = true;
 
   /**
   * Function that is called up when to state is created to set it up.
@@ -35,6 +40,11 @@ class Scene extends FlxState
   override public function create():Void
   {
     this.gestureManager.onGesture(Gesture.Swipe, onSwipe);
+    if (this.showAudioButton) {
+      this.audioButton = this.addAndCenter('assets/images/play-sound.png');
+      audioButton.y = FlxG.height - audioButton.height - 32;
+      MouseEventManager.add(audioButton, null, clickedAudioButton);
+    }
     super.create();
   }
 
@@ -91,6 +101,7 @@ class Scene extends FlxState
     FlxG.addChildBelowMouse(wrapper);
     wrapper.x = (FlxG.width - wrapper.width) / 2;
     wrapper.y = (FlxG.height - wrapper.height) / 2;
+    // wrapper.scaleX/scaleY
   }
 
   private function scaleToFitNonUniform(sprite:FlxSprite) : Void
@@ -134,5 +145,37 @@ class Scene extends FlxState
 
   private function showPreviousScene() : Void {
     FlxG.switchState(this.previousScene);
+  }
+
+  // Called by clicking on button
+  private function clickedAudioButton(sprite:FlxSprite) : Void {
+    playAudio();
+  }
+
+  // Called from subclass scenes
+  private function loadAndPlay(file:String) : Void
+  {
+    if (this.audio != null) {
+      this.audio.stop();
+    }
+
+    this.audio = FlxG.sound.load(file);
+    this.playAudio();
+  }
+
+  // Called in scenes
+  private function playAudio() : Void {
+    if (this.audio != null) {
+      this.audio.stop();
+      this.audio.play(true); // force restart
+    }
+  }
+
+  private function hideAudioButton() : Void
+  {
+    this.showAudioButton = false; // if constructor wasn't called yet
+    if (this.audioButton != null) {
+      this.audioButton.destroy();
+    }
   }
 }

@@ -23,7 +23,7 @@ class DarknessScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-1-darkness-skies.jpg');
     this.previousScene = new deengames.thisismylord.scene.TitleScreen();
     this.nextScene = new deengames.thisismylord.scene.PlanetScene();
-    deengames.io.AudioManager.play('assets/audio/speech/scene-1-darkness-skies.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-1-darkness-skies.mp3');    
     super.create();
   }
 

@@ -23,7 +23,7 @@ class CreatedMeScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-10-created-me.jpg');
     this.previousScene = new deengames.thisismylord.scene.CreatorOfUniverseScene();
     this.nextScene = new deengames.thisismylord.scene.GuidesMeScene();
-    deengames.io.AudioManager.play('assets/audio/speech/scene-10-created-me.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-10-created-me.mp3');
     var heartbeat:FlxSprite = addAndCenterAnimation('assets/images/beating-heart.jpg', 457, 341, 6, 8);
 
     super.create();
