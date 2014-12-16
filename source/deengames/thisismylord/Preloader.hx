@@ -21,7 +21,7 @@ class Preloader extends FlxPreloader
 
 	public function new()
 	{
-  	super(5, null);
+  	super(0, null);
 		minDisplayTime = 1;
 	}
 
