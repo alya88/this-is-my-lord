@@ -25,7 +25,9 @@ class SunriseScene extends Scene
     this.nextScene = new deengames.thisismylord.scene.FreeOfYouScene();
     this.loadAndPlay('assets/audio/speech/scene-7-sunrise');
 
-    this.addAndCenterAnimatedGif('assets/images/sunset.gif');
+    var gif = this.addAndCenterAnimatedGif('assets/images/sunset.gif');
+    gif.x = 0;
+    gif.y = 0;
     super.create();
   }
 

@@ -93,7 +93,7 @@ class Scene extends FlxState
     return sprite;
   }
 
-  private function addAndCenterAnimatedGif(file:String) {
+  private function addAndCenterAnimatedGif(file:String) : GifPlayerWrapper {
     var gif:Gif = GifDecoder.parseByteArray(Assets.getBytes(file));
     // Gif is null? Make sure in Project.xml, you specify *.gif as type=binary
     var player:GifPlayer = new GifPlayer(gif);
@@ -102,6 +102,7 @@ class Scene extends FlxState
     wrapper.x = (FlxG.width - wrapper.width) / 2;
     wrapper.y = (FlxG.height - wrapper.height) / 2;
     // wrapper.scaleX/scaleY
+    return wrapper;
   }
 
   private function scaleToFitNonUniform(sprite:FlxSprite) : Void
