@@ -23,7 +23,7 @@ class FeedsMeScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-12-feeds-me.jpg');
     this.previousScene = new deengames.thisismylord.scene.GuidesMeScene();
     this.nextScene = new deengames.thisismylord.scene.CuresMeScene();
-    this.loadAndPlay('assets/audio/speech/scene-12-feeds-me.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-12-feeds-me');
     super.create();
   }
 

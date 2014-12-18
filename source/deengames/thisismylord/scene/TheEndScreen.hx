@@ -30,7 +30,7 @@ class TheEndScreen extends Scene
     restart.y = FlxG.height - restart.height - 32;
     MouseEventManager.add(restart, null, restartGame, null, null);
 
-    this.loadAndPlay('assets/audio/speech/the-end.mp3');
+    this.loadAndPlay('assets/audio/speech/the-end');
     this.hideAudioButton();
     super.create();
   }

@@ -23,7 +23,7 @@ class MoonSetsScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-6-moon-sets.jpg');
     this.previousScene = new deengames.thisismylord.scene.LookingAtMoonScene();
     this.nextScene = new deengames.thisismylord.scene.SunriseScene();
-    this.loadAndPlay('assets/audio/speech/scene-6-moon-sets.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-6-moon-sets');
     super.create();
   }
 

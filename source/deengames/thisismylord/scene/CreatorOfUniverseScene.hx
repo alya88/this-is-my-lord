@@ -23,7 +23,7 @@ class CreatorOfUniverseScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-9-creator-of-universe.jpg');
     this.previousScene = new deengames.thisismylord.scene.FreeOfYouScene();
     this.nextScene = new deengames.thisismylord.scene.CreatedMeScene();
-    this.loadAndPlay('assets/audio/speech/scene-9-creator-of-universe.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-9-creator-of-universe');
     super.create();
   }
 

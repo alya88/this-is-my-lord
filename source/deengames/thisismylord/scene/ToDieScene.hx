@@ -23,7 +23,7 @@ class ToDieScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-14-to-die.jpg');
     this.previousScene = new deengames.thisismylord.scene.CuresMeScene();
     this.nextScene = new deengames.thisismylord.scene.ForgivenessScene();
-    this.loadAndPlay('assets/audio/speech/scene-14-to-die.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-14-to-die');
     super.create();
   }
 

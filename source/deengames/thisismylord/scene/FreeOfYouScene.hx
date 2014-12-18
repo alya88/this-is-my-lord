@@ -23,7 +23,7 @@ class FreeOfYouScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-8-free-of-you.jpg');
     this.previousScene = new deengames.thisismylord.scene.SunriseScene();
     this.nextScene = new deengames.thisismylord.scene.CreatorOfUniverseScene();
-    this.loadAndPlay('assets/audio/speech/scene-8-free-of-you.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-8-free-of-you');
     super.create();
   }
 

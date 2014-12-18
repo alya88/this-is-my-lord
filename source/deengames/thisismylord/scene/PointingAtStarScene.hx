@@ -23,7 +23,7 @@ class PointingAtStarScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-3-pointing-at-star.jpg');
     this.previousScene = new deengames.thisismylord.scene.PlanetScene();
     this.nextScene = new deengames.thisismylord.scene.DislikeStarScene();
-    this.loadAndPlay('assets/audio/speech/scene-3-pointing-at-star.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-3-pointing-at-star');
     super.create();
   }
 

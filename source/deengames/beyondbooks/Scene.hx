@@ -159,7 +159,7 @@ class Scene extends FlxState
       this.audio.stop();
     }
 
-    this.audio = FlxG.sound.load(file);
+    this.audio = FlxG.sound.load(file + deengames.io.AudioManager.SOUND_EXT);
     this.playAudio();
   }
 

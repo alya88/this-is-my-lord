@@ -25,7 +25,7 @@ class TitleScreen extends Scene
   {
     var title:FlxSprite = this.addAndCenter('assets/images/titlescreen.png');
     this.nextScene = new deengames.thisismylord.scene.DarknessScene();
-    this.loadAndPlay('assets/audio/speech/title.mp3');
+    this.loadAndPlay('assets/audio/speech/title');
     this.hideAudioButton();
     super.create();
   }

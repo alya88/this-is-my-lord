@@ -23,7 +23,7 @@ class PlanetScene extends Scene
     var title:FlxSprite = this.addAndCenter('assets/images/scene-2-saw-planet.jpg');
     this.previousScene = new deengames.thisismylord.scene.DarknessScene();
     this.nextScene = new deengames.thisismylord.scene.PointingAtStarScene();
-    this.loadAndPlay('assets/audio/speech/scene-2-saw-planet.mp3');
+    this.loadAndPlay('assets/audio/speech/scene-2-saw-planet');
     super.create();
   }
 
