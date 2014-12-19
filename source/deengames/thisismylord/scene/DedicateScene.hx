@@ -8,30 +8,22 @@ import flash.Lib;
 import flixel.FlxGame;
 import flixel.FlxState;
 import flixel.FlxSprite;
+import deengames.beyondbooks.Scene;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.plugin.MouseEventManager;
 
-import deengames.io.GestureManager;
-import deengames.beyondbooks.Scene;
-
-class TheEndScreen extends Scene
+class DedicateScene extends Scene
 {
   /**
   * Function that is called up when to state is created to set it up.
   */
   override public function create():Void
   {
-    var title:FlxSprite = this.addAndCenter('assets/images/the-end.png');
-    this.previousScene = new deengames.thisismylord.scene.DedicateScene();
-    this.nextScene = new deengames.thisismylord.scene.DarknessScene();
-
-    var restart:FlxSprite = this.addAndCenter('assets/images/restart.png');
-    restart.y = FlxG.height - restart.height - 32;
-    MouseEventManager.add(restart, null, restartGame, null, null);
-
-    this.loadAndPlay('assets/audio/speech/the-end');
-    this.hideAudioButton();
+    var title:FlxSprite = this.addAndCenter('assets/images/scene-16-dedicate.jpg');
+    this.previousScene = new deengames.thisismylord.scene.ForgivenessScene();
+    this.nextScene = new deengames.thisismylord.scene.TheEndScreen();
+    this.loadAndPlay('assets/audio/speech/scene-16-dedicate');
     super.create();
   }
 
@@ -50,10 +42,5 @@ class TheEndScreen extends Scene
   override public function update():Void
   {
     super.update();
-  }
-
-  private function restartGame(sprite:FlxSprite) : Void
-  {
-    FlxG.switchState(this.nextScene);
   }
 }
